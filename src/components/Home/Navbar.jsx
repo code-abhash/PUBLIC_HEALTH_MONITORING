@@ -29,41 +29,41 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="p-1.5 bg-slate-400 flex justify-between items-center ">
+            <nav className="p-1.5 bg-slate-600 flex justify-between items-center ">
                 <Link to="/" id="logo">
-                    <img src={img1} alt="Logo" className="object-cover w-12 h-auto border border-transparent rounded-lg"></img>
+                    <img src={img1} alt="Logo" className="object-cover w-14 h-auto border border-transparent rounded-lg"></img>
                 </Link>
-                <Link to="/" id="logo" className="hidden md:flex gap-5 justify-between items-center">
+                <Link to="/" id="logo" className="hidden lg:flex gap-5 justify-between items-center">
                     <img src={img2} alt="Doctor" className="object-cover w-12 h-auto border border-transparent rounded-lg"></img>
                     <span className="pl-6 underline">User</span>
                 </Link>
-                <div id="nav-menu" className="hidden md:flex gap-10 justify-between items-center">
+                <div id="nav-menu" className="hidden lg:flex gap-10 justify-between items-center">
                     <Link
                         to="/"
-                        className="pl-5 pr-5 text-slate-700 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+                        className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
                     >
                         Home
                     </Link>
                     <Link
                         to="/patients"
-                        className="pl-5 pr-5 text-slate-700 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+                        className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
                     >
                         Patients
                     </Link>
                     <Link
                         to="/nurse"
-                        className="pl-5 pr-5 text-slate-700 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+                        className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
                     >
                         Data Entry
                     </Link>
                     <Link
                         to="/settings"
-                        className="pl-5 pr-5 text-slate-700 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+                        className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
                     >
                         Settings
                     </Link>
                 </div>
-                <div id="nav-menu" className="hidden md:flex justify-between items-center ">
+                <div id="nav-menu" className="hidden lg:flex justify-between items-center ">
                     <Link
                         to="/"
                         className="pl-5 pr-5 text-slate-950 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
@@ -78,12 +78,12 @@ const Navbar = () => {
                     </Link>
                     <Link
                         to="/signup"
-                        className="pl-5 pr-5 text-slate-700 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+                        className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
                     >
                         Sign Out
                     </Link>
                 </div>
-                <button className="p-2 md:hidden" onClick={handleMenu}>
+                <button className="p-2 lg:hidden" onClick={handleMenu}>
                     <FontAwesomeIcon icon={faBars} className="text-gray-800 h-6" />
                 </button>
                 <div id="nav-dilogue" className={`fixed bg-slate-400 inset-0 p-3 ${isMenuOpen ? '' : 'hidden'}`}>
