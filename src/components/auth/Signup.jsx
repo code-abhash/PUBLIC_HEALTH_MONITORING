@@ -36,7 +36,7 @@ const Signup = () => {
     }
     return (<><center>
         <img src={img4} alt='logo' className='w-16 h-auto'></img></center>
-        <div className='flex flex-col justify-center bg-slate-600 items-center m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border rounded-md ' >
+        <div className='flex flex-col justify-center bg-slate-600 items-center m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/6  border rounded-md ' >
             <div className=' font-mono font-bold text-4xl'>Sign up</div>
             <div className='flex flex-col gap-3 mt-8'>
                 <div className='flex justify-between mt-5 w-72 border-b-2'>
