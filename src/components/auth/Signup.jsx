@@ -35,7 +35,6 @@ const Signup = () => {
       alert("Can't register and enter details properly");
       console.log(username, password, cpassword, email, role);
     }
-
   };
   return (
     <div className="flex flex-col m-5">
@@ -49,7 +48,7 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Username"
-              className=" placeholder-black bg-slate-600 w-64"
+              className="placeholder-black  bg-slate-600 w-64"
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -93,33 +92,9 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
-          <div className="flex justify-between mt-2 border-b-2">
-
-    return (<><center>
-        <img src={img4} alt='logo' className='w-16 h-auto'></img></center>
-        <div className='flex flex-col justify-center bg-slate-600 items-center m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/6  border rounded-md ' >
-            <div className=' font-mono font-bold text-4xl'>Sign up</div>
-            <div className='flex flex-col gap-3 mt-8'>
-                <div className='flex justify-between mt-5 w-72 border-b-2'>
-                    <input type="text" placeholder='Username' className='placeholder-yellow-700  bg-slate-600 w-64' value={username} onChange={(e) => { setUsername(e.target.value) }} ></input>
-                    <FontAwesomeIcon icon={faUser} />
-                </div>
-                <div className='flex justify-between mt-2 w-72 border-b-2'>
-                <input type="text" placeholder='Password' className='placeholder-yellow-700 bg-slate-600 w-64' value={password} onChange={(e)=>{setPassword(e.target.value)}}></input>
-                <FontAwesomeIcon icon={faLock} />
-            </div>
-            <div className='flex justify-between mt-2 w-72 border-b-2'>
-                <input type="text" placeholder='Confirm Password' className='placeholder-yellow-700 bg-slate-600 w-64' value={cpassword} onChange={(e)=>{setCpassword(e.target.value)}}></input>
-                <FontAwesomeIcon icon={faLock} />
-            </div>
-            <div className='flex justify-between mt-2 w-72 border-b-2'>
-                <input type="text" placeholder='Email' className='placeholder-yellow-700 bg-slate-600 w-64' value={email} onChange={(e)=>{setEmail(e.target.value)}}></input>
-                <FontAwesomeIcon icon={faEnvelope} />
-            </div>
-            <div className="flex justify-between">
-
+          <div className="flex justify-between border-b-2">
             <select
-              className="text-black bg-slate-600 "
+              className="text-black bg-slate-600"
               name="Role"
               value={role}
               onChange={(e) => {
@@ -133,21 +108,17 @@ const Signup = () => {
             <FontAwesomeIcon icon={faSuitcaseMedical} />
           </div>
           <button
-            className="bg-blue-600 rounded-lg h-10 font-bold  mt-8"
+            className="bg-blue-600 rounded-lg font-bold h-10 mt-8"
             onClick={checkpassword}
           >
             Register
           </button>
-          <div className="flex justify-between m-5">
-            <div>
-              {" "}
-              <p className="text-gray-900">Already have an account?</p>
-            </div>
-            <div>
-              <Link to="/login" className="text-blue-500 ">
-                Login
-              </Link>
-            </div>
+          <div className="flex flex-row  justify-between">
+            <p className="text-gray-900 ">Already have an account?</p>
+            <Link to="/Login" className="text-blue-400 ">
+              Sign In!
+            </Link>
+            <div></div>
           </div>
         </div>
       </div>
