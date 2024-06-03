@@ -35,6 +35,7 @@ const Signup = () => {
       alert("Can't register and enter details properly");
       console.log(username, password, cpassword, email, role);
     }
+
   };
   return (
     <div className="flex flex-col m-5">
@@ -93,6 +94,30 @@ const Signup = () => {
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
           <div className="flex justify-between mt-2 border-b-2">
+
+    return (<><center>
+        <img src={img4} alt='logo' className='w-16 h-auto'></img></center>
+        <div className='flex flex-col justify-center bg-slate-600 items-center m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/6  border rounded-md ' >
+            <div className=' font-mono font-bold text-4xl'>Sign up</div>
+            <div className='flex flex-col gap-3 mt-8'>
+                <div className='flex justify-between mt-5 w-72 border-b-2'>
+                    <input type="text" placeholder='Username' className='placeholder-yellow-700  bg-slate-600 w-64' value={username} onChange={(e) => { setUsername(e.target.value) }} ></input>
+                    <FontAwesomeIcon icon={faUser} />
+                </div>
+                <div className='flex justify-between mt-2 w-72 border-b-2'>
+                <input type="text" placeholder='Password' className='placeholder-yellow-700 bg-slate-600 w-64' value={password} onChange={(e)=>{setPassword(e.target.value)}}></input>
+                <FontAwesomeIcon icon={faLock} />
+            </div>
+            <div className='flex justify-between mt-2 w-72 border-b-2'>
+                <input type="text" placeholder='Confirm Password' className='placeholder-yellow-700 bg-slate-600 w-64' value={cpassword} onChange={(e)=>{setCpassword(e.target.value)}}></input>
+                <FontAwesomeIcon icon={faLock} />
+            </div>
+            <div className='flex justify-between mt-2 w-72 border-b-2'>
+                <input type="text" placeholder='Email' className='placeholder-yellow-700 bg-slate-600 w-64' value={email} onChange={(e)=>{setEmail(e.target.value)}}></input>
+                <FontAwesomeIcon icon={faEnvelope} />
+            </div>
+            <div className="flex justify-between">
+
             <select
               className="text-black bg-slate-600 "
               name="Role"
