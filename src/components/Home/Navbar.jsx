@@ -77,16 +77,16 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faEnvelope} />
                     </Link>
                     <Link
-                        to="/signup"
+                        to="/login"
                         className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
                     >
-                        Sign Out
+                        Logout
                     </Link>
                 </div>
                 <button className="p-2 lg:hidden" onClick={handleMenu}>
                     <FontAwesomeIcon icon={faBars} className="text-gray-800 h-6" />
                 </button>
-                <div id="nav-dilogue" className={`fixed bg-slate-400 inset-0 p-3 ${isMenuOpen ? '' : 'hidden'}`}>
+                <div id="nav-dilogue" className={`fixed bg-slate-400 h-4/6 inset-0 p-3 ${isMenuOpen ? '' : 'hidden'}`}>
                     <div id="nav-bar" className="flex justify-between">
                         <img src={img1} alt="Logo" className="object-cover w-12 h-auto border border-transparent rounded-lg"></img>
                         <button className="p-2 lg:hidden" onClick={handleMenu}>
@@ -116,10 +116,10 @@ const Navbar = () => {
                             Settings
                         </Link>
                         <Link
-                            to="/signup"
+                            to="/login"
                             className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-slate-700"
                         >
-                            Sign Out
+                            Logout
                         </Link>
                     </div>
                 </div>
