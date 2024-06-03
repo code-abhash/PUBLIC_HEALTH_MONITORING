@@ -28,8 +28,8 @@ const Navbar = () => {
     }, [isMenuOpen]);
 
     return (
-        <>
-            <nav className="p-1.5 bg-slate-600 flex justify-between items-center ">
+        <><div>
+            <nav className="p-1.5 flex justify-between items-center nav_home">
                 <Link to="/" id="logo">
                     <img src={img1} alt="Logo" className="object-cover w-14 h-auto border border-transparent rounded-lg"></img>
                 </Link>
@@ -123,7 +123,7 @@ const Navbar = () => {
                         </Link>
                     </div>
                 </div>
-            </nav>
+            </nav></div>
         </>
     );
 };

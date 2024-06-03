@@ -6,7 +6,7 @@ import Temp from './Temp';
 
 const Realtime = () => {
   return ( <>
-  <div className=" flex flex-col gap-5 lg:grid grid-cols-2 grid-rows-2 h-screen m-5">
+  <div className=" flex flex-col items-center gap-5 lg:grid grid-cols-2 grid-rows-2 h-4/5 m-5">
   <div className="bg-white m-3 w-4/5 h-full border-none rounded-md "><div className='m-1 lg:m-3 text-red-700 font-bold'>Heart Beat(bpm)</div><div><Heart/></div></div>
   <div className="bg-white col-start-2 m-3 w-4/5 h-full border-none rounded-md"><div className='m-1 lg:m-3 text-blue-700 font-bold'>Blood Pressure(mm Hg)</div><div><Blood/></div></div>
   <div className="bg-white row-start-2 m-3 w-4/5 h-full border-none rounded-md"><div className='m-1 lg:m-3 text-green-700 font-bold'>Spo2(%)</div><div><Spo2/></div></div>

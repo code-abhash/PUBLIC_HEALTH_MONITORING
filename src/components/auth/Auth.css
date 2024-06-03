@@ -1,0 +1,7 @@
+body{
+    background-image: url("./img/BG.jpeg");
+    background-size: cover;
+}
+option{
+    background: rgba(33, 160, 37, 0.3) ;
+}

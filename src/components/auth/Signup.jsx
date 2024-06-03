@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import img4 from "./img/logo.jpg";
+import './Auth.css'
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -25,7 +26,7 @@ const Signup = () => {
         console.log(username, password, cpassword, email, role);
         alert("Your account got created");
         if (role === "doctor") {
-          navigate("/doctor");
+          navigate("/");
         }
         if (role === "nurse") {
           navigate("/nurse");
@@ -39,16 +40,16 @@ const Signup = () => {
   return (
     <div className="flex flex-col m-5">
       <center>
-        <img src={img4} alt="logo" className="w-16 h-auto m-4"></img>
+        <img src={img4} alt="logo" className="w-16 h-auto m-4 border-2 rounded border-gray-500"></img>
       </center>
-      <div className="flex flex-col justify-center bg-slate-600 items-center m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border rounded-md ">
+      <div className="flex flex-col justify-center items-center bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 border-white rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Sign up</div>
         <div className="flex flex-col gap-3 mt-8">
-          <div className="flex justify-between mt-5 w-72 border-b-2">
+          <div className="flex justify-around items-center mt-5 w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
               type="text"
               placeholder="Username"
-              className="placeholder-black  bg-slate-600 w-64"
+              className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -56,11 +57,11 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faUser} />
           </div>
-          <div className="flex justify-between mt-2 w-72 border-b-2">
+          <div className="flex justify-around items-center  w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
               type="text"
               placeholder="Password"
-              className="placeholder-black bg-slate-600 w-64"
+              className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
@@ -68,11 +69,11 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faLock} />
           </div>
-          <div className="flex justify-between mt-2 w-72 border-b-2">
+          <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
               type="text"
               placeholder="Confirm Password"
-              className="placeholder-black bg-slate-600 w-64"
+              className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={cpassword}
               onChange={(e) => {
                 setCpassword(e.target.value);
@@ -80,11 +81,11 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faLock} />
           </div>
-          <div className="flex justify-between mt-2 w-72 border-b-2">
+          <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
               type="text"
               placeholder="Email"
-              className="placeholder-black bg-slate-600 w-64"
+              className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -92,9 +93,9 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
-          <div className="flex justify-between border-b-2">
+          <div className="flex justify-between items-center border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <select
-              className="text-black bg-slate-600"
+              className="text-black bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl  font-medium text-lg"
               name="Role"
               value={role}
               onChange={(e) => {
@@ -102,21 +103,21 @@ const Signup = () => {
               }}
             >
               <option value="">Occupation</option>
-              <option value="doctor">Doctor</option>
+              <option value="doctor" >Doctor</option>
               <option value="nurse">Nurse</option>
             </select>
-            <FontAwesomeIcon icon={faSuitcaseMedical} />
+            <FontAwesomeIcon icon={faSuitcaseMedical} className="mr-1" />
           </div>
           <button
-            className="bg-blue-600 rounded-lg font-bold h-10 mt-8"
+            className="bg-red-950 rounded-lg font-black h-10 mt-5 text-yellow-200"
             onClick={checkpassword}
           >
             Register
           </button>
           <div className="flex flex-row  justify-between">
-            <p className="text-gray-900 ">Already have an account?</p>
-            <Link to="/Login" className="text-blue-400 ">
-              Sign In!
+            <p className="text-stone-950 font-bold ">Already have an account?</p>
+            <Link to="/Login" className="text-gray-900 font-semibold mb-5 ">
+              Login!
             </Link>
             <div></div>
           </div>

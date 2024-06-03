@@ -6,9 +6,9 @@ import Visitors from './Icon/Visitors.png'
 
 const Dashboard = () => {
   return (
-    <div className=' flex flex-col sm:flex-row md:gap-4 lg:gap-5 xl:gap-40 w-full p-3'>
+    <div className=' flex flex-col items-center gap-4 sm:flex-row md:gap-4 lg:gap-5 xl:gap-40 w-full p-3'>
         <BoxDash>
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full '>
             <div className='text-green-700 font-bold w-full'>New Patients</div>
             <div className=' flex flex-row justify-between w-full'>
             <div className='text-gray-600 font-bold'>125</div>
@@ -53,5 +53,5 @@ const Dashboard = () => {
 export default Dashboard
 
 const BoxDash=({children})=>{
-    return(<div className='bg-white rounded-md p-4 flex-1 border border-gray-300 flex items-center h-20'>{children}</div>)
+    return(<div className='bg-white rounded-md p-4 flex-1 border border-gray-300 flex items-center h-20 w-4/5 s:w-full'>{children}</div>)
 }
