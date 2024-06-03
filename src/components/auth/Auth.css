@@ -1,6 +1,8 @@
 body{
-    background-image: url("./img/BG.jpeg");
+    background-image: url("./img/BG.jpeg") ;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 option{
     background: rgba(33, 160, 37, 0.3) ;
