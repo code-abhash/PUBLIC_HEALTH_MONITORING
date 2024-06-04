@@ -59,7 +59,7 @@ const Signup = () => {
           </div>
           <div className="flex justify-around items-center  w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={password}
@@ -71,7 +71,7 @@ const Signup = () => {
           </div>
           <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
-              type="text"
+              type="password"
               placeholder="Confirm Password"
               className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={cpassword}
@@ -83,7 +83,7 @@ const Signup = () => {
           </div>
           <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
             <input
-              type="text"
+              type="email"
               placeholder="Email"
               className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={email}

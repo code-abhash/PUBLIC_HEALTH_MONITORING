@@ -8,7 +8,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col gap-2 home_page">
+      <div className="flex flex-col gap-5 home_page">
         <div>
           <Navbar />
         </div>
@@ -23,7 +23,7 @@ const Home = () => {
             <Panel />
           </div>
         <div>
-            <p className="text-slate-600 font-bold mt-20 ml-1 pt-8 ">
+            <p className="text-slate-600 font-bold  ml-1 ">
               Real Time Analysis
             </p>
             <Realtime />
