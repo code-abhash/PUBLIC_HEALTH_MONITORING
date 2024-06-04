@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import img4 from "./img/logo.jpg";
-import './Auth.css'
+import "./Auth.css";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -40,16 +40,20 @@ const Signup = () => {
   return (
     <div className="flex flex-col m-5">
       <center>
-        <img src={img4} alt="logo" className="w-16 h-auto m-4 border-2 rounded border-gray-500"></img>
+        <img
+          src={img4}
+          alt="logo"
+          className="w-16 h-auto m-4 border-2 rounded border-gray-500"
+        ></img>
       </center>
       <div className="flex flex-col justify-center items-center bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 border-white rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Sign up</div>
         <div className="flex flex-col gap-3 mt-8">
-          <div className="flex justify-around items-center mt-5 w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
+          <div className="flex justify-around items-center mt-5 w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <input
               type="text"
               placeholder="Username"
-              className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
+              className="placeholder-black rounded-md placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl"
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -57,7 +61,7 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faUser} />
           </div>
-          <div className="flex justify-around items-center  w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
+          <div className="flex justify-around items-center  w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <input
               type="password"
               placeholder="Password"
@@ -69,7 +73,7 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faLock} />
           </div>
-          <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
+          <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <input
               type="password"
               placeholder="Confirm Password"
@@ -81,7 +85,7 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faLock} />
           </div>
-          <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
+          <div className="flex justify-around items-center w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <input
               type="email"
               placeholder="Email"
@@ -93,7 +97,7 @@ const Signup = () => {
             ></input>
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
-          <div className="flex justify-between items-center border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm">
+          <div className="flex justify-between items-center border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <select
               className="text-black bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl  font-medium text-lg"
               name="Role"
@@ -103,7 +107,7 @@ const Signup = () => {
               }}
             >
               <option value="">Occupation</option>
-              <option value="doctor" >Doctor</option>
+              <option value="doctor">Doctor</option>
               <option value="nurse">Nurse</option>
             </select>
             <FontAwesomeIcon icon={faSuitcaseMedical} className="mr-1" />
@@ -115,8 +119,10 @@ const Signup = () => {
             Register
           </button>
           <div className="flex flex-row  justify-between">
-            <p className="text-stone-950 font-bold ">Already have an account?</p>
-            <Link to="/Login" className="text-gray-900 font-semibold mb-5 ">
+            <p className="text-stone-950 font-bold ">
+              Already have an account?
+            </p>
+            <Link to="/Login" className="text-green-500 font-semibold mb-5 ">
               Login!
             </Link>
             <div></div>
