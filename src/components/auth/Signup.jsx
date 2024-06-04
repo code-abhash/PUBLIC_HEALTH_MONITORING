@@ -109,7 +109,7 @@ const Signup = () => {
             <FontAwesomeIcon icon={faSuitcaseMedical} className="mr-1" />
           </div>
           <button
-            className="bg-red-950 rounded-lg font-black h-10 mt-5 text-yellow-200"
+            className="bg-blue-900 rounded-lg font-black h-10 mt-5 text-slate-200"
             onClick={checkpassword}
           >
             Register

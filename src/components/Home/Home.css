@@ -1,11 +1,14 @@
 
 .nav_home{
-background-color: white;
+background-color: rgb(88, 220, 86);
 }
 #root{
     width:100%;
 }
 .home_page{
     width:100%;
-    background-color: rgba(238, 241, 245, 1);;
+    background:url("./img/pblue.avif") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

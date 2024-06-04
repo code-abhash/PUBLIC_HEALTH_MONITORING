@@ -26,11 +26,11 @@ const Login = () => {
       <div className="flex flex-col justify-center items-center bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 border-gray-500 rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Login</div>
         <div className="flex flex-col gap-3 mt-8">
-          <div className="flex justify-around items-center mt-5 w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm ">
+          <div className="flex justify-around  items-center mt-5 w-72 border-transparent border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-sm ">
             <input
               type="text"
               placeholder="Username"
-              className="placeholder-black placeholder:font-medium placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl "
+              className="placeholder-black placeholder:font-medium  placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl "
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -59,7 +59,7 @@ const Login = () => {
             </Link>
           </div>
           <button
-            className="bg-red-950 rounded-lg font-black h-10 mt-5 text-yellow-200"
+            className="bg-blue-900 rounded-lg font-black h-10 mt-5 text-slate-200"
             onClick={printdata}
           >
             Login
