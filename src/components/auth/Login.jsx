@@ -19,7 +19,7 @@ const Login = () => {
     alert("You are logged in!!");
   };
   return (
-    <div className="flex flex-col m-5  ">
+    <div className="flex flex-col bgimg">
       <center>
         <img src={img4} alt="logo" className="w-16 h-auto m-4 border-2 rounded border-gray-500"></img>
       </center>

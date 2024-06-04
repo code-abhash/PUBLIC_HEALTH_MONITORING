@@ -24,9 +24,9 @@ const Panel = () => {
             )}
           </button>
           {isOpen && (
-            <div className=" bg-black text-slate-300 absolute top-20 flex flex-col items-start rounded-lg p-4 w-full">
+            <div className=" bg-black text-slate-300 absolute top-20 flex z-10 flex-col items-start rounded-lg p-4 w-full">
               {list.map((item, i) => (
-                <div className="p-1 w-full hover:bg-slate-300 border-b-2 hover:text-black">
+                <div className="p-1 w-full hover:bg-slate-300 border-b-2  hover:text-black">
                   <h3>{item.disease}</h3>
                 </div>
               ))}

@@ -1,7 +1,9 @@
-#root{
-    width: 100%;
-    height:100%
+body>#root > div {
+    min-height: 100vh;
 }
 .data_form{
     width: 100%;
+}
+.fbgimg{
+    background-color: aquamarine;
 }

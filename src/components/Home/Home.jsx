@@ -7,9 +7,8 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <>
-      <div className="flex flex-col gap-5 home_page">
-        <div>
+      <div className="flex flex-col gap-8 home_page ">
+        <div className="bg-slate-200">
           <Navbar />
         </div>
         <div>
@@ -21,17 +20,17 @@ const Home = () => {
               Disease Panel
             </p>
             <Panel />
-          </div>
+          </div> 
         <div>
-            <p className="text-slate-600 font-bold  ml-1 ">
+            <p className="text-slate-600 font-bold  ml-1 mt-10 ">
               Real Time Analysis
             </p>
             <Realtime />
           </div>
         <div className="flex flex-col gap-5 md:gap-20">
         </div>
+        
       </div>
-    </>
   );
 };
 

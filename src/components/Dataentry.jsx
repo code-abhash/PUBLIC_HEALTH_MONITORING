@@ -19,7 +19,8 @@ import { useNavigate } from "react-router-dom";
     navigate('/login');
   }
   return (
-    <form className="bg-blue-400">
+    <div className="fbgimg">
+    <form className=" ">
       <div className="space-y-12 mr-2 ml-2">
         <div className="border-b border-gray-900/10 pb-12">
           <div className="flex flex-row justify-between">
@@ -194,10 +195,10 @@ import { useNavigate } from "react-router-dom";
         </div>
       </div>
 
-      <div className="mt-8 flex flex-row justify-center items-center  gap-x-6">
+      <div className="mt-8 flex flex-row justify-center items-center gap-x-6">
         <button
           type="button"
-          className="rounded-md bg-red-600 m-5 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+          className="rounded-md bg-red-600 m-20 mr-5 px-3 py-2 text-sm  font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
           onClick={cancelVal}
           
         >
@@ -205,13 +206,13 @@ import { useNavigate } from "react-router-dom";
         </button>
         <button
         type="submit"
-          className="rounded-md bg-indigo-600 m-5 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="rounded-md bg-indigo-600 m-20 ml-0 px-3 py-2 text-sm  font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           onClick={submitVal}
         >
           Submit
         </button>
       </div>
-    </form>
+    </form></div>
   );
 }
 

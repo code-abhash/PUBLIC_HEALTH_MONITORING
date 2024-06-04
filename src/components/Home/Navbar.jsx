@@ -112,7 +112,7 @@ const Navbar = () => {
           </button>
           <div
             id="nav-dilogue"
-            className={`fixed bg-slate-400 h-4/6 inset-0 p-3 ${
+            className={`fixed bg-slate-400 h-4/6 z-20 inset-0 p-3 ${
               isMenuOpen ? "" : "hidden"
             }`}
           >

@@ -13,7 +13,7 @@ const Realtime = () => {
             Heart Beat(bpm)
           </div>
           <div>
-            <Heart />
+            <Heart/>
           </div>
         </div>
         <div className="bg-white col-start-2 m-3 w-4/5 h-full border-none rounded-md">
