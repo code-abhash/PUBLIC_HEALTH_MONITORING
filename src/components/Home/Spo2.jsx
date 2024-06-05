@@ -42,7 +42,7 @@ function Spo2() {
         <Tooltip/>
         <XAxis dataKey="date"/>
         <YAxis />
-        <Line dataKey="spo2" stroke='brown'/>
+        <Line dataKey="spo2" stroke='blue'/>
       </LineChart>
       
     </ResponsiveContainer>

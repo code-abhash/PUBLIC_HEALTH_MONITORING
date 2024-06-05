@@ -40,7 +40,7 @@ function Heart() {
         <Tooltip/>
         <XAxis dataKey="date"/>
         <YAxis />
-        <Line dataKey="Bp"/>
+        <Line dataKey="Bp" stroke='black'/>
       </LineChart>
     </ResponsiveContainer>
 

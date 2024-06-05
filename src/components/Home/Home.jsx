@@ -12,17 +12,17 @@ const Home = () => {
           <Navbar />
         </div>
         <div>
-          <p className="text-slate-600 font-bold  ml-1 pt-4 ">Dashboard</p>
+          <p className="p_txt font-bold  ml-1 pt-4 ">Dashboard</p>
           <Dashboard />
         </div>
         <div>
-            <p className="text-slate-600 font-bold  ml-1 ">
+            <p className="p_txt font-bold  ml-1 ">
               Disease Panel
             </p>
             <Panel />
           </div> 
         <div>
-            <p className="text-slate-600 font-bold  ml-1 mt-10 ">
+            <p className="p_txt font-bold  ml-1 mt-10 ">
               Real Time Analysis
             </p>
             <Realtime />

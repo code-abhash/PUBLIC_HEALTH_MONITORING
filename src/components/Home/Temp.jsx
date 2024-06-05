@@ -43,7 +43,7 @@ function Temp() {
         <Tooltip/>
         <XAxis dataKey="date"/>
         <YAxis />
-        <Line dataKey="temperature_f" stroke='orange'/>
+        <Line dataKey="temperature_f" stroke='brown'/>
       </LineChart>
       
     </ResponsiveContainer>

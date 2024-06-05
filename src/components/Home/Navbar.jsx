@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import img1 from "./img/logo.jpg";
 import img2 from "./img/img3.jpg";
 import React, { useState, useEffect } from "react";
+import './Home.css';
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -34,16 +36,15 @@ const Navbar = () => {
 
   return (
     <>
-      <div>
         <nav className="p-1.5 flex justify-between items-center nav_home">
-          <Link to="/" id="logo">
+          <NavLink to="/" id="logo">
             <img
               src={img1}
               alt="Logo"
               className="object-cover w-14 h-auto border border-transparent rounded-lg"
             ></img>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
             id="logo"
             className="hidden lg:flex gap-5 justify-between items-center"
@@ -54,58 +55,59 @@ const Navbar = () => {
               className="object-cover w-12 h-auto border border-transparent rounded-lg"
             ></img>
             <span className="pl-6 underline">User</span>
-          </Link>
+          </NavLink>
           <div
             id="nav-menu"
             className="hidden lg:flex gap-10 justify-between items-center"
           >
-            <Link
+            <NavLink
               to="/"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 focus:text-slate-600"
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
+
               to="/patients"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
             >
               Patients
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/nurse"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
               Data Entry
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/settings"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
               Settings
-            </Link>
+            </NavLink>
           </div>
           <div
             id="nav-menu"
             className="hidden lg:flex justify-between items-center "
           >
-            <Link
+            <NavLink
               to="/"
               className="pl-5 pr-5 text-slate-950 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
             >
               <FontAwesomeIcon icon={faBell} />
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/"
               className="pl-5 pr-5 text-slate-950 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
             >
               <FontAwesomeIcon icon={faEnvelope} />
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/login"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950"
             >
               Logout
-            </Link>
+            </NavLink>
           </div>
           <button className="p-2 lg:hidden" onClick={handleMenu}>
             <FontAwesomeIcon icon={faBars} className="text-gray-800 h-6" />
@@ -160,7 +162,6 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-      </div>
     </>
   );
 };

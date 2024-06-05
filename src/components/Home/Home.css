@@ -1,4 +1,14 @@
 
 .home_page{
-    background-color: rgb(80, 178, 178);
+    background-color: rgba(234, 238, 243, 1);
+}
+.dash_col,.nav_home{
+    background-color: rgba(255, 255, 255, 1);
+}
+.but_pan{
+    background-color: rgba(188, 189, 191, 1);
+    color: rgb(77, 79, 83);
+}
+.p_txt{
+    color: rgba(102, 102, 102, 1);
 }

@@ -5,5 +5,8 @@ body>#root > div {
     width: 100%;
 }
 .fbgimg{
-    background-color: aquamarine;
+    background-color: rgba(129, 170, 210, 1);
+}
+.ent_clr{
+    background-color: rgba(217, 217, 217, 1);
 }
