@@ -46,7 +46,7 @@ const Signup = () => {
           className="w-16 h-auto m-4 border-2 rounded border-gray-500"
         ></img>
       </center>
-      <div className="flex flex-col justify-center items-center bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 border-white rounded-3xl ">
+      <div className="flex flex-col justify-center items-center bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 border-white rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Sign up</div>
         <div className="flex flex-col gap-3 mt-8">
           <div className="flex justify-around items-center mt-5 w-72 border-transparent  border-2 bg-transparent bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">

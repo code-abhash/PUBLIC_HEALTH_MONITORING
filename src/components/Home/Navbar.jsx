@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className="p-1.5 flex justify-between items-center nav_home">
+        <nav className="p-1.5 flex bg-blue-600 justify-between items-center nav_home">
           <NavLink to="/" id="logo">
             <img
               src={img1}
@@ -114,7 +114,7 @@ const Navbar = () => {
           </button>
           <div
             id="nav-dilogue"
-            className={`fixed bg-slate-400 h-4/6 z-20 inset-0 p-3 ${
+            className={`fixed bg-blue-600 h-4/6 z-20 inset-0 p-3 ${
               isMenuOpen ? "" : "hidden"
             }`}
           >
@@ -131,31 +131,31 @@ const Navbar = () => {
             <div className="mt-6">
               <Link
                 to="/"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-slate-700"
+                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
               >
                 Home
               </Link>
               <Link
                 to="/patients"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-slate-700"
+                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
               >
                 Patients
               </Link>
               <Link
                 to="/nurse"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-slate-700"
+                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
               >
                 Data Entry
               </Link>
               <Link
                 to="/settings"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-slate-700"
+                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
               >
                 Settings
               </Link>
               <Link
                 to="/login"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-slate-700"
+                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
               >
                 Logout
               </Link>
