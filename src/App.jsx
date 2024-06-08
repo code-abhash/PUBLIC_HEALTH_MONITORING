@@ -4,13 +4,12 @@ import Doctor from './components/Doctor'
 import Home from './components/Home/Home'
 import Dataentry from './components/Dataentry'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
-import Patients from './components/Patients'
+import Patients from './components/Patients/Patients'
 import Settings from './components/Settings'
 
 
 function App() {
   
-
   const router=createBrowserRouter([
     {
       path:'/signup',
