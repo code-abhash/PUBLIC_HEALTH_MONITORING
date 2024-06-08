@@ -54,7 +54,7 @@ const Navbar = () => {
               alt="Doctor"
               className="object-cover w-12 h-auto border border-transparent rounded-lg"
             ></img>
-            <span className="pl-6 underline">User</span>
+            <span className="pl-4 font-medium text-yellow-300">User</span>
           </NavLink>
           <div
             id="nav-menu"
@@ -62,26 +62,26 @@ const Navbar = () => {
           >
             <NavLink
               to="/"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 focus:text-slate-600"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 focus:text-slate-600"
             >
               Home
             </NavLink>
             <NavLink
 
               to="/patients"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
             >
               Patients
             </NavLink>
             <NavLink
               to="/nurse"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
               Data Entry
             </NavLink>
             <NavLink
               to="/settings"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
               Settings
             </NavLink>
@@ -92,19 +92,19 @@ const Navbar = () => {
           >
             <NavLink
               to="/"
-              className="pl-5 pr-5 text-slate-950 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
             >
               <FontAwesomeIcon icon={faBell} />
             </NavLink>
             <NavLink
               to="/"
-              className="pl-5 pr-5 text-slate-950 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
             >
               <FontAwesomeIcon icon={faEnvelope} />
             </NavLink>
             <NavLink
               to="/login"
-              className="pl-5 pr-5 text-slate-900 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950"
             >
               Logout
             </NavLink>
@@ -131,31 +131,31 @@ const Navbar = () => {
             <div className="mt-6">
               <Link
                 to="/"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
+                className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
               >
                 Home
               </Link>
               <Link
                 to="/patients"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
+                className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
               >
                 Patients
               </Link>
               <Link
                 to="/nurse"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
+                className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
               >
                 Data Entry
               </Link>
               <Link
                 to="/settings"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
+                className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
               >
                 Settings
               </Link>
               <Link
                 to="/login"
-                className="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg text-black"
+                className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
               >
                 Logout
               </Link>
