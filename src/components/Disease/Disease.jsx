@@ -7,8 +7,12 @@ import Navbar from '../Home/Navbar';
 
 const Disease = () => {
   return (<>
-    <div className='flex flex-col bg-blue-300'><Navbar/><Header/>
-    <Patient_info/><Vitals/><Disease_summary/></div>
+    <div className='flex flex-col bg-blue-300'><div><Navbar/></div>
+    <div><Header/></div>
+    <div><Patient_info/></div>
+    <div><Vitals/></div>
+    <div><Disease_summary/></div>
+    </div>
     </>)
 }
 

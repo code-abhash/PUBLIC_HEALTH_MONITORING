@@ -2,9 +2,9 @@ import React from 'react'
 
 const Vitals = () => {
   return (
-    <div className='flex flex-row justify-between items-center bg-slate-400'>
+    <div className='flex flex-row justify-between items-center bg-slate-400 w-full'>
         <div className='font-extrabold underline'>Vitals Sign</div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-1/3 h-1/6 mr-96 m-5">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 sm:gap-4 sm:w-1/3 sm:h-1/6 sm:mr-96 sm:m-5">
         <div className="flex items-center justify-center border border-gray-300  bg-slate-300 shadow p-4 font-bold rounded-md">
           HEART RATE
         </div>
