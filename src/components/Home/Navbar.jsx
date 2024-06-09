@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className="p-1.5 flex bg-blue-600 justify-between items-center nav_home">
+        <nav className="p-2 flex bg-blue-600 justify-between items-center nav_home">
           <NavLink to="/" id="logo">
             <img
               src={img1}
