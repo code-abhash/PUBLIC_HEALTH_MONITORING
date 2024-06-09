@@ -11,7 +11,7 @@ const Patients = () => {
     <div>
         <Navbar/>
         <Header />
-      <div className="flex flex-row justify-between h-screen w-full bg-green-500">
+      <div className="flex flex-row justify-between h-screen w-full bg-green-400">
         <PatientInfo />
         <Sidebar />
       </div>

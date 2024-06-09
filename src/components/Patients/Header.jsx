@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="bg-blue-700 p-4 flex justify-between items-center">
       <h1 className="text-white text-lg">#PATIENT_ID</h1>
-      <button className="bg-green-400 rounded-full p-2">
+      <button className="bg-green-500 rounded-full p-2">
         {/* Add an icon here */}
         <img
               src={patient}
