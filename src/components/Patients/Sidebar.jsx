@@ -3,7 +3,7 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <div className="bg-green-500 flex flex-col gap-4 p-6">
+    <div className="bg-green-400 flex flex-col gap-4 p-6">
       <h2 className="text-xl font-medium">Patient_Name</h2>
       <p className='text-lg font-normal'>Age: 55 years</p>
       <p className='text-lg font-normal'>Height: 175 cm</p>
