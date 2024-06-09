@@ -6,6 +6,7 @@ import Dataentry from './components/Dataentry'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Patients from './components/Patients/Patients'
 import Settings from './components/Settings'
+import Disease from './components/Disease/Disease'
 
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
     {
       path:'/patients',
       element:<Patients/>
+    },
+    {
+      path:'/disease',
+      element:<Disease/>
     }
   ])
 
