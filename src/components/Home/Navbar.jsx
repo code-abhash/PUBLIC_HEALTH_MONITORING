@@ -74,6 +74,13 @@ const Navbar = () => {
               Patients
             </NavLink>
             <NavLink
+
+              to="/PRecords"
+              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
+            >
+              Patient Records
+            </NavLink>
+            <NavLink
               to="/nurse"
               className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
@@ -140,6 +147,12 @@ const Navbar = () => {
                 className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
               >
                 Patients
+              </Link>
+              <Link
+                to="/PRecords"
+                className="font-medium m-3 p-3 hover:bg-gray-800 block rounded-lg text-yellow-400"
+              >
+                Patient Records
               </Link>
               <Link
                 to="/nurse"
