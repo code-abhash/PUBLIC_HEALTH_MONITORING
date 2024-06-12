@@ -9,6 +9,13 @@ const Panel = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState("Choose Disease");
+
+  const handleSelect = (disease) => {
+    setValue(disease);
+    setIsOpen(false);
+  };
+
+
   return (
     <React.Fragment>
       <div className="flex flex-row justify-center  items-center mb-10 ">
@@ -32,7 +39,10 @@ const Panel = () => {
           {isOpen && (
             <div className=" but_pan font-medium absolute bg-black text-slate-300 top-20 flex z-10 flex-col items-start rounded-lg p-4 w-full">
               {list.map((item, i) => (
-                <div className="p-1 w-full hover:bg-slate-300 border-b-2  hover:text-black">
+                <div 
+                key={i}
+                className="p-1 w-full hover:bg-slate-300 border-b-2  hover:text-black"
+                onClick={() => handleSelect(item.disease)}>
                   <h3>{item.disease}</h3>
                 </div>
               ))}

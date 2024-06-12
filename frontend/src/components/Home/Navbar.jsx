@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className="p-2 flex bg-blue-600 justify-between items-center nav_home">
+        <nav className="p-2 flex justify-between items-center nav_home">
           <NavLink to="/" id="logo">
             <img
               src={img1}
@@ -54,7 +54,7 @@ const Navbar = () => {
               alt="Doctor"
               className="object-cover w-12 h-auto border border-transparent rounded-lg"
             ></img>
-            <span className="pl-4 font-medium text-yellow-300">User</span>
+            <span className="pl-4 font-medium ">User</span>
           </NavLink>
           <div
             id="nav-menu"
@@ -62,33 +62,33 @@ const Navbar = () => {
           >
             <NavLink
               to="/"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 focus:text-slate-600"
+              className="pl-5 pr-5 font-bold hover:text-gray-400 hover:underline rounded hover:bg-gray-200 focus:text-slate-600"
             >
               Home
             </NavLink>
             <NavLink
 
               to="/patients"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
+              className="pl-5 pr-5 font-bold hover:text-gray-400 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
             >
               Patients
             </NavLink>
             <NavLink
 
               to="/PRecords"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
+              className="pl-5 pr-5 font-bold hover:text-gray-400 hover:underline rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
             >
               Patient Records
             </NavLink>
             <NavLink
               to="/nurse"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
+              className="pl-5 pr-5 font-bold hover:text-gray-400 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
               Data Entry
             </NavLink>
             <NavLink
               to="/settings"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
+              className="pl-5 pr-5 font-bold hover:text-gray-400 hover:underline rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
             >
               Settings
             </NavLink>
@@ -99,19 +99,19 @@ const Navbar = () => {
           >
             <NavLink
               to="/"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
             >
               <FontAwesomeIcon icon={faBell} />
             </NavLink>
             <NavLink
               to="/"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
+              className="pl-5 pr-5 font-bold hover:text-gray-900 hover:underline active:text-gray-950"
             >
               <FontAwesomeIcon icon={faEnvelope} />
             </NavLink>
             <NavLink
               to="/login"
-              className="pl-5 pr-5 text-yellow-300 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950"
+              className="pl-5 pr-5 font-bold hover:text-gray-900 hover:underline rounded hover:bg-gray-200 active:text-gray-950"
             >
               Logout
             </NavLink>
@@ -121,7 +121,7 @@ const Navbar = () => {
           </button>
           <div
             id="nav-dilogue"
-            className={`fixed bg-blue-600 h-4/6 z-20 inset-0 p-3 ${
+            className={`fixed bg-gray-200 h-4/6 z-20 inset-0 p-3 ${
               isMenuOpen ? "" : "hidden"
             }`}
           >

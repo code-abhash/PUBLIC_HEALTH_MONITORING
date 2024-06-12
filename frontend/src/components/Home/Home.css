@@ -1,9 +1,9 @@
 
 .home_page{
-    background-color: rgb(249, 233, 233);
+    background-color: rgb(235, 236, 238);
 }
-.dash_col,.nav_home{
-    background-color: rgba(255, 255, 255, 1);
+.dash_col,.nav_home,.real_bg{
+    background-color: rgb(240, 246, 249);
 }
 .but_pan{
     background-color: rgba(188, 189, 191, 1);
