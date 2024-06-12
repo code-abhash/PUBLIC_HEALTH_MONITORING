@@ -8,18 +8,37 @@ import {
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import img4 from "./img/logo.jpg";
+import users from './Login.json';
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
-  const printdata = () => {
-    console.log(username, password);
-    alert("You are logged in!!");
+  const handleLogin  = (e) => {
+    e.preventDefault();
+        const user = users.find(u => u.username === username && u.password === password);
+        if (user) {
+          if(user.occupation==="nurse"){
+            navigate("/nurse");
+            alert(`Welcome ${user.occupation}, ${user.username}!`);
+            // Here you can redirect to another page or perform other actions
+          }
+          if(user.occupation==="doctor"){
+            navigate("/");
+            alert(`Welcome ${user.occupation}, ${user.username}!`);
+          }
+        } else {
+            setErrorMessage('Invalid username or password');
+            alert("Enter Correct Username and Password")
+        }
+
   };
-  return (
-    <div className="flex flex-col bgimg">
+  return (<div className="flex flex-col bgimg">
+      
       <center>
         <img
           src={img4}
@@ -29,10 +48,12 @@ const Login = () => {
       </center>
       <div className="flex flex-col justify-center items-center bg-gradient-to-b from-blue-400  to-blue-500  backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Login</div>
+        <form onSubmit={handleLogin}>
         <div className="flex flex-col gap-3 mt-8">
           <div className="flex justify-around rounded-lg items-center mt-5 w-72 border-transparent border-2  bg-slate-100 bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl">
             <input
               type="text"
+              name="username"
               placeholder="Username"
               className="placeholder-black placeholder:font-medium rounded-md placeholder:text-lg font-medium text-lg  w-64 bg-transparent bg-opacity-10 shadow-2xl "
               value={username}
@@ -45,6 +66,7 @@ const Login = () => {
           <div className="flex justify-around items-center mt-2 w-72 bg-slate-100 border-2 border-transparent  bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <input
               type="password"
+              name="password"
               placeholder="Password"
               className="placeholder-black placeholder:font-medium rounded-md placeholder:text-lg font-medium text-lg  w-64  bg-transparent bg-opacity-10 shadow-2xl"
               value={password}
@@ -64,7 +86,7 @@ const Login = () => {
           </div>
           <button
             className="bg-blue-900 rounded-lg font-black h-10 mt-5 text-slate-200"
-            onClick={printdata}
+            onClick={handleLogin }
           >
             Login
           </button>
@@ -75,7 +97,8 @@ const Login = () => {
             </Link>
             <div></div>
           </div>
-        </div>
+        </div></form>
+        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </div>
     </div>
   );
