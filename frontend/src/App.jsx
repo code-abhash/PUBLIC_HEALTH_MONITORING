@@ -17,6 +17,10 @@ function App() {
       element:<Signup/>
     },
     {
+      path:'/',
+      element:<Signup/>
+    },
+    {
       path:'/login',
       element:<Login/>
     },
@@ -29,7 +33,7 @@ function App() {
       element:<Dataentry/>
     },
     {
-      path:'/',
+      path:'/home',
       element:<Home/>
     },
     {

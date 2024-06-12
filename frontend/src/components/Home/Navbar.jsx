@@ -61,7 +61,7 @@ const Navbar = () => {
             className="hidden lg:flex gap-10 justify-between items-center"
           >
             <NavLink
-              to="/"
+              to="/home"
               className="pl-5 pr-5 font-bold hover:text-gray-400 hover:underline rounded hover:bg-gray-200 focus:text-slate-600"
             >
               Home

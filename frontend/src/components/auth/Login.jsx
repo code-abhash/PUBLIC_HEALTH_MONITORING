@@ -28,7 +28,7 @@ const Login = () => {
             // Here you can redirect to another page or perform other actions
           }
           if(user.occupation==="doctor"){
-            navigate("/");
+            navigate("/home");
             alert(`Welcome ${user.occupation}, ${user.username}!`);
           }
         } else {

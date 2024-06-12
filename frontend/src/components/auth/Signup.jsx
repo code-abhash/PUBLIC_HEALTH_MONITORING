@@ -26,7 +26,7 @@ const Signup = () => {
         console.log(username, password, cpassword, email, role);
         alert("Your account got created");
         if (role === "doctor") {
-          navigate("/");
+          navigate("/home");
         }
         if (role === "nurse") {
           navigate("/nurse");
