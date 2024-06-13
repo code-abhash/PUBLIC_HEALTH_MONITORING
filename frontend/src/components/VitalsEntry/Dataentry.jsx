@@ -8,6 +8,7 @@ import BodyTemperatureSlider from "./BodyTemperatureslider";
 import SPO2Slider from "./SPO2Slider";
 import SystolicBPSlider from "./SystolicBPSlider";
 import DiastolicBPSlider from "./DiastolicBPSlider";
+import Infobutton from "../Infobutton/Infobutton";
 
 function Dataentry() {
   const navigate = useNavigate();
@@ -64,7 +65,8 @@ function Dataentry() {
                     htmlFor="username"
                     className="block font-semibold leading-6 text-gray-900"
                   >
-                    Patient ID
+                    Patient ID <Infobutton message={`-Enter the id of patient
+                      -ex : 12345678`}/>
                   </label>
                   <div className="mt-2">
                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-900 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
@@ -86,7 +88,8 @@ function Dataentry() {
               <div className="mt-1 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">
                   <label className="block font-semibold leading-6 text-gray-900">
-                    Name
+                    Name <Infobutton message={`Enter the name of patient
+                      -ex: Aarav Sharma`}/>
                   </label>
                   <div className="mt-2">
                     <input
@@ -103,7 +106,8 @@ function Dataentry() {
                     htmlFor="heart_rate"
                     className="block font-semibold leading-6 text-gray-900"
                   >
-                    Doctor's Name
+                    Doctor's Name <Infobutton message={`Enter the name of doctor under whom the patient is being supervised
+                      -ex: Dr. Vivek Patel`}/>
                   </label>
                   <div className="mt-2">
                     <input
@@ -114,7 +118,6 @@ function Dataentry() {
                     />
                   </div>
                 </div>
-
                 <HeartRateSlider />
                 <BodyTemperatureSlider />
                 <SPO2Slider />

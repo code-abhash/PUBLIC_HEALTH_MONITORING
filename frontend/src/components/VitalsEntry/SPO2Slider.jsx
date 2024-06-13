@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Infobutton from "../Infobutton/Infobutton";
 
 const SPO2Slider = () => {
   const [spo2Value, setSpo2Value] = useState(90);
@@ -9,7 +10,7 @@ const SPO2Slider = () => {
         htmlFor="spo2"
         className="block font-semibold leading-6 text-gray-900"
       >
-        SPO2 (%)
+        SPO2 (%) <Infobutton message={`Enter saturated oxygen value(spo2) of Patients Using slider by dragging it to correct value`}/>
       </label>
       <input
         id="spo2"
