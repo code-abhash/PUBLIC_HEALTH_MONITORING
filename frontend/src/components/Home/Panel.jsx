@@ -98,7 +98,7 @@ const Panel = () => {
               {list.map((item, i) => (
                 <div
                   key={i}
-                  className="px-6 py-1 hover:bg-gray-700 transition duration-300 ease-in-out"
+                  className="px-6 py-1 hover:bg-gray-700 hover:cursor-pointer transition duration-300 ease-in-out"
                   onClick={() => handleSelect(item.disease)}
                 >
                   {item.disease}
@@ -113,4 +113,3 @@ const Panel = () => {
 };
 
 export default Panel;
-

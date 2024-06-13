@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Infobutton from "../Infobutton/Infobutton";
 
 const BodyTemperatureSlider = () => {
   // State to hold the body temperature value
@@ -15,7 +16,7 @@ const BodyTemperatureSlider = () => {
         htmlFor="body-temperature"
         className="block font-semibold leading-6 text-gray-900"
       >
-        Body Temperature (°C)
+        Body Temperature (°C) <Infobutton message={`Enter the Body Temperature of Patients Using slider by dragging it to correct value`}/>
       </label>
       <input
         id="body-temperature"

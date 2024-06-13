@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Infobutton from "../Infobutton/Infobutton";
 
 const HeartRateSlider = () => {
   // State to hold the heart rate value
@@ -15,7 +16,7 @@ const HeartRateSlider = () => {
         htmlFor="heart-rate"
         className="block font-semibold leading-6 text-gray-900"
       >
-        Heart Rate (bpm)
+        Heart Rate (bpm) <Infobutton message={`Enter Heart Rate in BPM(beats per minute) of Patients Using slider by dragging it to correct value`}/>
       </label>
       <input
         id="heart-rate"

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Infobutton from "../Infobutton/Infobutton";
 
 const SystolicBPSlider = () => {
   const [systolicBP, setSystolicBP] = useState(120); // Default to average normal systolic BP
@@ -9,7 +10,7 @@ const SystolicBPSlider = () => {
         htmlFor="systolic-bp"
         className="block font-semibold leading-6 text-gray-900"
       >
-        Systolic BP (mm Hg)
+        Systolic BP (mm Hg) <Infobutton message={`Enter the Systolic value of BP of Patients Using slider by dragging it to correct value`}/>
       </label>
       <input
         id="systolic-bp"
