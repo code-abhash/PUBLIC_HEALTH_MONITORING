@@ -10,7 +10,7 @@ const Patients = () => {
     <div>
         <Navbar/>
         <Header />
-      <div className="flex flex-row justify-between h-screen w-full bg-gradient-to-r from-green-400 to-slate-100">
+      <div className="flex flex-row justify-between h-screen w-full bg-blue-200">
         <PatientInfo />
         <Sidebar />
       </div>
