@@ -43,7 +43,7 @@ const EditFormPopup = ({ isOpen, rowData, onSave, onClose }) => {
 
   return (
     <div className={`fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center ${isOpen ? '' : 'hidden'}`}>
-      <div className="bg-white p-6 rounded-lg shadow-lg">
+      <div className="bg-blue-200 p-6 rounded-lg shadow-lg">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Patient Name:</label>
@@ -151,18 +151,18 @@ const Records = () => {
   };
 
   return (
-    <div className="bg-white h-screen overflow-x-auto">
+    <div className="bg-blue-200 h-screen overflow-x-auto">
       <table {...getTableProps()} className="w-full shadow-xl rounded-md border-collapse m-auto">
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()} className="hover:trh">
               {headerGroup.headers.map(column => (
-                <th {...column.getHeaderProps(column.getSortByToggleProps())} className="p-4 bg-black text-white text-left first-of-type:rounded-l-lg">
+                <th {...column.getHeaderProps(column.getSortByToggleProps())} className="p-4 bg-gray-400 text-white text-left first-of-type:rounded-l-lg">
                   {column.render("Header")}
                   {column.isSorted ? (column.isSortedDesc ? " 🔽" : " 🔼") : ""}
                 </th>
               ))}
-              <th className="p-4 bg-black text-white rounded-r-lg">Actions</th>
+              <th className="p-4 bg-gray-400 text-white rounded-r-lg">Actions</th>
             </tr>
           ))}
         </thead>
