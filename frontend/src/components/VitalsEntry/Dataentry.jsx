@@ -3,16 +3,19 @@ import { UserCircleIcon } from "@heroicons/react/24/solid";
 import "./Dataentry.css";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Home/Navbar";
-import HeartRateSlider from "./HeartRateSlider";
-import BodyTemperatureSlider from "./BodyTemperatureslider";
-import SPO2Slider from "./SPO2Slider";
-import SystolicBPSlider from "./SystolicBPSlider";
-import DiastolicBPSlider from "./DiastolicBPSlider";
+import HeartRateSlider from "./HeartRateButton";
+import BodyTemperatureSlider from "./BodyTemperatureButton";
+import SPO2Slider from "./SPO2Button";
+import SystolicBPSlider from "./SystolicBPButton";
+import DiastolicBPSlider from "./DiastolicBPButton";
 import Infobutton from "../Infobutton/Infobutton";
 
 function Dataentry() {
   const navigate = useNavigate();
 
+  const [patientId, setPatientId] = useState("");
+  const [patientName, setPatientName] = useState("");
+  const [doctorName, setDoctorName] = useState("");
   const [bodyTemp, setBodyTemp] = useState(37);
   const [heartRate, setHeartRate] = useState(60);
   const [spo2Value, setSpo2Value] = useState(90);
@@ -64,7 +67,8 @@ function Dataentry() {
                 This Information will be Confidential
               </p>
               <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                <div className="sm:col-span-4">
+                {/* Patient ID */}
+                <div className="sm:col-span-3">
                   <label
                     htmlFor="username"
                     className="block font-semibold leading-6 text-gray-900"
@@ -72,7 +76,7 @@ function Dataentry() {
                     Patient ID{" "}
                     <Infobutton
                       message={`-Enter the id of patient
-                     -ex : 12345678`}
+                 -ex : 12345678`}
                     />
                   </label>
                   <div className="mt-2">
@@ -84,107 +88,132 @@ function Dataentry() {
                         autoComplete="username"
                         className="block flex-1 border-0 bg-transparent p-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                         placeholder="Enter Patient ID"
+                        value={patientId}
+                        onChange={(e) => setPatientId(e.target.value)}
                       />
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="border-b border-gray-900/10 ">
-              <div className="mt-1 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                {/* Patient Name */}
                 <div className="sm:col-span-3">
                   <label
                     htmlFor="first-name"
                     className="block font-semibold leading-6 text-gray-900"
                   >
-                    Name
+                    Patient Name
                     <Infobutton
                       message={`Enter the name of patient
-                       -ex: Aarav Sharma`}
+                   -ex: Aarav Sharma`}
                     />
                   </label>
-                  <div className="mt-2">
+                  <div className="mt-2 flex rounded-md shadow-sm ring-1 ring-inset ring-gray-900 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                     <input
                       type="text"
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block flex-1 border-0 bg-transparent p-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                       placeholder="Enter Patient Name"
+                      value={patientName}
+                      onChange={(e) => setPatientName(e.target.value)}
                     />
                   </div>
                 </div>
-                <div className="sm:col-span-3">
-                  <label
-                    htmlFor="doctor_name"
-                    className="block font-semibold leading-6 text-gray-900"
-                  >
-                    Doctor's Name{" "}
-                    <Infobutton
-                      message={`Enter the name of doctor under whom the patient is being supervised
-                       -ex: Dr. Vivek Patel`}
-                    />
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="doctor_name"
-                      name="doctor_name"
-                      type="text"
-                      className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      placeholder="Enter Doctor's Name"
-                    />
-                  </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Doctor's Name Input */}
+              <div className="col-span-1  p-4 rounded-xl shadow-lg">
+                <label
+                  htmlFor="doctor_name"
+                  className="block font-semibold leading-6 text-gray-900"
+                >
+                  Doctor's Name{" "}
+                  <Infobutton message="Enter the name of doctor under whom the patient is being supervised -ex: Dr. Vivek Patel" />
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="doctor_name"
+                    name="doctor_name"
+                    type="text"
+                    className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter Doctor's Name"
+                    value={doctorName}
+                    onChange={(e) => setDoctorName(e.target.value)}
+                  />
                 </div>
-                <div className="sm:col-span-3">
-                  <label
-                    htmlFor="appointment_date"
-                    className="block font-semibold leading-6 text-gray-900"
-                  >
-                    Date of Entry{" "}
-                    <Infobutton
-                      message={`Enter the Date of entry of vitals signs by selecting in given calender`}
-                    />
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="appointment_date"
-                      name="appointment_date"
-                      type="date"
-                      className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      value={appointmentDate}
-                      onChange={(e) => setAppointmentDate(e.target.value)}
-                    />
-                  </div>
+              </div>
+
+              {/* Date of Entry Input */}
+              <div className="col-span-1 p-4 rounded-xl shadow-lg">
+                <label
+                  htmlFor="appointment_date"
+                  className="block font-semibold leading-6 text-gray-900"
+                >
+                  Date of Entry{" "}
+                  <Infobutton message="Enter the Date of entry of vitals signs by selecting in given calendar" />
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="appointment_date"
+                    name="appointment_date"
+                    type="date"
+                    className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    value={appointmentDate}
+                    onChange={(e) => setAppointmentDate(e.target.value)}
+                  />
                 </div>
-                <div className="sm:col-span-3">
-                  <label
-                    htmlFor="appointment_time"
-                    className="block font-semibold leading-6 text-gray-900"
-                  >
-                    Time of Entry{" "}
-                    <Infobutton
-                      message={`Enter the Time of entry of vitals signs`}
-                    />
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      id="appointment_time"
-                      name="appointment_time"
-                      type="time"
-                      className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      value={appointmentTime}
-                      onChange={(e) => setAppointmentTime(e.target.value)}
-                    />
-                  </div>
+              </div>
+
+              {/* Time of Entry Input */}
+              <div className="col-span-1 p-4 rounded-xl shadow-lg">
+                <label
+                  htmlFor="appointment_time"
+                  className="block font-semibold leading-6 text-gray-900"
+                >
+                  Time of Entry{" "}
+                  <Infobutton message="Enter the Time of entry of vitals signs" />
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="appointment_time"
+                    name="appointment_time"
+                    type="time"
+                    className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    value={appointmentTime}
+                    onChange={(e) => setAppointmentTime(e.target.value)}
+                  />
                 </div>
+              </div>
+
+              {/* HeartRateSlider Component */}
+              <div className="col-span-1">
                 <HeartRateSlider />
+              </div>
+
+              {/* BodyTemperatureSlider Component */}
+              <div className="col-span-1">
                 <BodyTemperatureSlider />
+              </div>
+
+              {/* SPO2Slider Component */}
+              <div className="col-span-1">
                 <SPO2Slider />
+              </div>
+
+              {/* SystolicBPSlider Component */}
+              <div className="col-span-1">
                 <SystolicBPSlider />
+              </div>
+
+              {/* DiastolicBPSlider Component */}
+              <div className="col-span-1">
                 <DiastolicBPSlider />
               </div>
             </div>
           </div>
+
           <div className="mt-8 flex flex-row justify-center items-center gap-x-6">
             <button
               type="button"
