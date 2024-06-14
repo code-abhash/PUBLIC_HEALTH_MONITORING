@@ -18,31 +18,37 @@ function Dataentry() {
   const [spo2Value, setSpo2Value] = useState(90);
   const [systolicBP, setSystolicBP] = useState(120);
   const [diastolicBP, setDiastolicBP] = useState(80);
+  const [appointmentDate, setAppointmentDate] = useState("");
+  const [appointmentTime, setAppointmentTime] = useState("");
 
   const submitVal = (e) => {
     e.preventDefault();
     alert("Data is entered You are being logged out");
-    console.log("Body Temperature:", { bodyTemp });
-    console.log("Heart Rate:", { heartRate });
-    console.log("SPO2%:", { spo2Value });
-    console.log("Systolic BP:", { systolicBP });
-    console.log("Diastolic BP:", { diastolicBP });
+    console.log("Body Temperature:", bodyTemp);
+    console.log("Heart Rate:", heartRate);
+    console.log("SPO2%:", spo2Value);
+    console.log("Systolic BP:", systolicBP);
+    console.log("Diastolic BP:", diastolicBP);
+    console.log("Appointment Date:", appointmentDate);
+    console.log("Appointment Time:", appointmentTime);
     navigate("/home");
   };
+
   const cancelVal = (e) => {
     e.preventDefault();
     alert("Your data won't be saved anymore");
     navigate("/home");
   };
+
   return (
     <>
       <Navbar />
       <div className="fbgimg">
-        <form className="  ">
+        <form className="">
           <div className="space-y-12 mr-2 ml-2">
             <div className="border-b border-gray-900/10 pb-12">
               <div className="flex flex-row justify-between">
-                <h1 className="text-base font-extrabold  mt-2 leading-7 text-gray-900">
+                <h1 className="text-base font-extrabold mt-2 leading-7 text-gray-900">
                   VITALS ENTRY PAGE
                 </h1>
                 <div className="col-span-full">
@@ -54,19 +60,20 @@ function Dataentry() {
                   </div>
                 </div>
               </div>
-
-              <p className=" text-sm leading-6 text-gray-800">
+              <p className="text-sm leading-6 text-gray-800">
                 This Information will be Confidential
               </p>
-
               <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-4">
                   <label
                     htmlFor="username"
                     className="block font-semibold leading-6 text-gray-900"
                   >
-                    Patient ID <Infobutton message={`-Enter the id of patient
-                      -ex : 12345678`}/>
+                    Patient ID{" "}
+                    <Infobutton
+                      message={`-Enter the id of patient
+                     -ex : 12345678`}
+                    />
                   </label>
                   <div className="mt-2">
                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-900 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
@@ -76,20 +83,25 @@ function Dataentry() {
                         id="username"
                         autoComplete="username"
                         className="block flex-1 border-0 bg-transparent p-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                        placeholder="XYZ"
+                        placeholder="Enter Patient ID"
                       />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="border-b border-gray-900/10 ">
               <div className="mt-1 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">
-                  <label className="block font-semibold leading-6 text-gray-900">
-                    Name <Infobutton message={`Enter the name of patient
-                      -ex: Aarav Sharma`}/>
+                  <label
+                    htmlFor="first-name"
+                    className="block font-semibold leading-6 text-gray-900"
+                  >
+                    Name
+                    <Infobutton
+                      message={`Enter the name of patient
+                       -ex: Aarav Sharma`}
+                    />
                   </label>
                   <div className="mt-2">
                     <input
@@ -98,23 +110,70 @@ function Dataentry() {
                       id="first-name"
                       autoComplete="given-name"
                       className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="Enter Patient Name"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-3">
                   <label
-                    htmlFor="heart_rate"
+                    htmlFor="doctor_name"
                     className="block font-semibold leading-6 text-gray-900"
                   >
-                    Doctor's Name <Infobutton message={`Enter the name of doctor under whom the patient is being supervised
-                      -ex: Dr. Vivek Patel`}/>
+                    Doctor's Name{" "}
+                    <Infobutton
+                      message={`Enter the name of doctor under whom the patient is being supervised
+                       -ex: Dr. Vivek Patel`}
+                    />
                   </label>
                   <div className="mt-2">
                     <input
-                      id="rate"
-                      name="rate"
+                      id="doctor_name"
+                      name="doctor_name"
                       type="text"
                       className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="Enter Doctor's Name"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-3">
+                  <label
+                    htmlFor="appointment_date"
+                    className="block font-semibold leading-6 text-gray-900"
+                  >
+                    Date of Entry{" "}
+                    <Infobutton
+                      message={`Enter the Date of entry of vitals signs by selecting in given calender`}
+                    />
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="appointment_date"
+                      name="appointment_date"
+                      type="date"
+                      className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      value={appointmentDate}
+                      onChange={(e) => setAppointmentDate(e.target.value)}
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-3">
+                  <label
+                    htmlFor="appointment_time"
+                    className="block font-semibold leading-6 text-gray-900"
+                  >
+                    Time of Entry{" "}
+                    <Infobutton
+                      message={`Enter the Time of entry of vitals signs`}
+                    />
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="appointment_time"
+                      name="appointment_time"
+                      type="time"
+                      className="ent_clr block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      value={appointmentTime}
+                      onChange={(e) => setAppointmentTime(e.target.value)}
                     />
                   </div>
                 </div>
@@ -126,18 +185,17 @@ function Dataentry() {
               </div>
             </div>
           </div>
-
           <div className="mt-8 flex flex-row justify-center items-center gap-x-6">
             <button
               type="button"
-              className="rounded-md bg-red-600 m-20 mr-5 px-3 py-2 text-sm  font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+              className="rounded-md bg-red-600 m-20 mr-5 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
               onClick={cancelVal}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="rounded-md bg-green-600 m-20 ml-0 px-3 py-2 text-sm  font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-green-600 m-20 ml-0 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               onClick={submitVal}
             >
               Submit
