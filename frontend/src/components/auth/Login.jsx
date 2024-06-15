@@ -6,35 +6,40 @@ import {
   faLock,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import img4 from "./img/logo.jpg";
-import users from './Login.json';
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
+import AuthContext from "../../../Auth_contxt/Authcontext";
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate();
+
+  const {loginUser} = useContext(AuthContext)
 
   const handleLogin  = (e) => {
     e.preventDefault();
-        const user = users.find(u => u.username === username && u.password === password);
-        if (user) {
-          if(user.occupation==="nurse"){
-            navigate("/nurse");
-            alert(`Welcome ${user.occupation}, ${user.username}!`);
-            // Here you can redirect to another page or perform other actions
-          }
-          if(user.occupation==="doctor"){
-            navigate("/home");
-            alert(`Welcome ${user.occupation}, ${user.username}!`);
-          }
-        } else {
-            setErrorMessage('Invalid username or password');
-            alert("Enter Correct Username and Password")
-        }
+        //const user = users.find(u => u.username === username && u.password === password);
+        // if (user) {
+        //   if(user.occupation==="nurse"){
+        //     navigate("/nurse");
+        //     alert(`Welcome ${user.occupation}, ${user.username}!`);
+        //     // Here you can redirect to another page or perform other actions
+        //   }
+        //   if(user.occupation==="doctor"){
+        //     navigate("/home");
+        //     alert(`Welcome ${user.occupation}, ${user.username}!`);
+        //   }
+        // } else {
+        //     setErrorMessage('Invalid username or password');
+        //     alert("Enter Correct Username and Password")
+        // }
+        username.length > 0 && loginUser(username, password)
+
+    console.log(username)
+    console.log(password)
 
   };
   return (<div className="flex flex-col bgimg">
@@ -52,6 +57,7 @@ const Login = () => {
         <div className="flex flex-col gap-3 mt-8">
           <div className="flex justify-around rounded-lg items-center mt-5 w-72 border-transparent border-2  bg-slate-100 bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl">
             <input
+              id="use_id"
               type="text"
               name="username"
               placeholder="Username"
@@ -65,6 +71,7 @@ const Login = () => {
           </div>
           <div className="flex justify-around items-center mt-2 w-72 bg-slate-100 border-2 border-transparent  bg-opacity-10 backdrop-filter backdrop-blur-xl shadow-2xl rounded-lg">
             <input
+              id="pass_id"
               type="password"
               name="password"
               placeholder="Password"
@@ -86,19 +93,18 @@ const Login = () => {
           </div>
           <button
             className="bg-blue-900 rounded-lg font-black h-10 mt-5 text-slate-200"
-            onClick={handleLogin }
+            type="submit"
           >
             Login
           </button>
           <div className="flex flex-row gap-2 justify-between mb-12">
             <p className="text-stone-950 font-bold">Don't have an account?</p>
-            <Link to="/signup" className="text-green-100 font-semibold ">
+            <Link to="/register" className="text-green-100 font-semibold ">
               Register Here!
             </Link>
             <div></div>
           </div>
         </div></form>
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </div>
     </div>
   );
