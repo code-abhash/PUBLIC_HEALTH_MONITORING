@@ -70,11 +70,11 @@ const HeartRateChart = () => {
   };
 
   const weekData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     datasets: [
       {
         label: 'Heart Rate Per Week',
-        data: [72, 75, 71, 74, 72],
+        data: [72, 75, 71, 74, 72, 75, 73],
         fill: false,
         borderColor: 'rgb(54, 162, 235)',
         tension: 0.1

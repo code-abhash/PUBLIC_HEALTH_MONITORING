@@ -1,12 +1,10 @@
-body>#root > div {
-    min-height: 100vh;
+body > #root > div {
+  min-height: 100vh;
 }
-.data_form{
-    width: 100%;
+.data_form {
+  width: 100%;
 }
-.fbgimg{
-    background-color: rgb(185, 203, 203);
-}
-.ent_clr{
-    background-color: rgb(255, 254, 254);
+
+.ent_clr {
+  background-color: rgb(255, 254, 254);
 }

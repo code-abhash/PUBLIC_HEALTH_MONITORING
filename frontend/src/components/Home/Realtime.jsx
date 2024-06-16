@@ -21,7 +21,7 @@ const Realtime = () => {
           <Spo2 />
         </div>
         <div className="m-3 w-full lg:w-4/5 h-auto bg-white shadow-lg rounded-lg p-4 hover:shadow-2xl transition-shadow duration-300">
-          <h2 className="text-xl font-bold mb-4">Temperature (F)</h2>
+          <h2 className="text-xl font-bold mb-4">Temperature (°F)</h2>
           <Temp />
         </div>
       </div>

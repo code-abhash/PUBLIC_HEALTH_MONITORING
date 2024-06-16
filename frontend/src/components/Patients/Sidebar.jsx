@@ -21,7 +21,7 @@ import { MdCatchingPokemon } from 'react-icons/md';
 
 const Sidebar = () => {
   return (
-    <aside className="shadow-xl bg-gradient-to-b from-white  to-blue-200 rounded-lg p-6 flex flex-col gap-6">
+    <aside className="shadow-xl bg-gradient-to-b from-gray-50  to-blue-100 rounded-lg p-6 flex flex-col gap-6">
       <div className="flex items-center gap-2 hover:bg-green-100 p-2 rounded-md">
         <MdCatchingPokemon className="text-yellow-500" />
         <p className='text-lg font-normal'>Age: 55 years</p>

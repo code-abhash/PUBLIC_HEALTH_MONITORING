@@ -370,9 +370,9 @@ function Dataentry() {
   return (
     <>
       <Navbar />
-      <div className="fbgimg">
+      <div className="bg-gray-50">
         <form className="" onSubmit={submitVal}>
-          <div className="space-y-12 mr-2 ml-2">
+          <div className="space-y-12 mr-5 ml-5">
             <div className="border-b border-gray-900/10 pb-12">
               <div className="flex flex-row justify-between">
                 <h1 className="text-base font-extrabold mt-2 leading-7 text-gray-900">

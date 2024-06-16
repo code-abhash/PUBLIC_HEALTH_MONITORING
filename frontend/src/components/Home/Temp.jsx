@@ -1,59 +1,3 @@
-
-// import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip,Legend} from 'recharts'
-
-// function Temp() {
-//   const arrayBp=[
-//     {
-//       "date": "01 Jan",
-//       "temperature_f": 98.6
-//     },
-//     {
-//       "date": "02 Jan",
-//       "temperature_f": 99.1
-//     },
-//     {
-//       "date": "03 Jan",
-//       "temperature_f": 98.3
-//     },
-//     {
-//       "date": "04 Jan",
-//       "temperature_f": 98.9
-//     },
-//     {
-//       "date": "05 Jan",
-//       "temperature_f": 99.5
-//     },
-//     {
-//       "date": "06 Jan",
-//       "temperature_f": 98.7
-//     },
-//     {
-//       "date": "07 Jan",
-//       "temperature_f": 99.2
-//     }
-//   ]
-  
-  
-
-//   return (
-//     <>
-//     <ResponsiveContainer width="100%" aspect={2}>
-//       <LineChart data={arrayBp} height={400} width={500}>
-//       <Legend/>
-//         <Tooltip/>
-//         <XAxis dataKey="date"/>
-//         <YAxis />
-//         <Line dataKey="temperature_f" stroke='brown'/>
-//       </LineChart>
-      
-//     </ResponsiveContainer>
-
-//     </>
-//   )
-// }
-
-// export default Temp;
-
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
@@ -65,7 +9,7 @@ const TemperatureChart = () => {
     datasets: [
       {
         label: 'Temperature Per Day',
-        data: [36.5, 36.6, 36.7, 36.8, 36.5],
+        data: [96, 99, 97, 100, 102],
         fill: false,
         borderColor: 'rgb(255, 99, 132)',
         tension: 0.1
@@ -74,11 +18,11 @@ const TemperatureChart = () => {
   };
 
   const weekData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     datasets: [
       {
         label: 'Temperature Per Week',
-        data: [36.6, 36.7, 36.5, 36.8, 36.6],
+        data: [96, 99, 97, 100, 102, 98, 101],
         fill: false,
         borderColor: 'rgb(255, 99, 132)',
         tension: 0.1
@@ -91,7 +35,7 @@ const TemperatureChart = () => {
     datasets: [
       {
         label: 'Temperature Per Month',
-        data: [36.7, 36.6, 36.8, 36.5],
+        data: [96, 99, 97, 100, 102],
         fill: false,
         borderColor: 'rgb(255, 99, 132)',
         tension: 0.1
