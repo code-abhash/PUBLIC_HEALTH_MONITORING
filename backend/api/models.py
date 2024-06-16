@@ -18,19 +18,19 @@ class User(AbstractUser):
     
 
 class Profile(models.Model):
-    role=models.OneToOneField(User, on_delete=models.CASCADE)  
+    user=models.OneToOneField(User, on_delete=models.CASCADE)  
     verified=models.BooleanField(default=False)
     Name=models.CharField( max_length=150)
     specialty = models.CharField(max_length=100)
 
     def __str__(self):
-        return f'Profile for {self.role.username}'
+        return f'Profile for {self.user.username}'
 
     
 @receiver(post_save, sender=User)
-def create_or_update_role_profile(sender, instance, created, **kwargs):
+def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
-        Profile.objects.create(role=instance, verified=False)  # Initialize with verified=False
+        Profile.objects.create(user=instance, verified=False)  # Initialize with verified=False
     instance.profile.save()
 
 

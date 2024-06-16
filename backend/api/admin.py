@@ -6,7 +6,7 @@ class Useradmin(admin.ModelAdmin):
 
 class Profileadmin(admin.ModelAdmin):
     list_editable=['verified']
-    list_display=['role','Name','specialty','verified']
+    list_display=['user','Name','specialty','verified']
 
 class Patientadmin(admin.ModelAdmin):
     list_display=['patientName', 'patientId', 'doctorName', 'appointmentDate',
