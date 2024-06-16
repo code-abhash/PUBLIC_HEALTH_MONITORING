@@ -6,13 +6,23 @@ class Useradmin(admin.ModelAdmin):
 
 class Profileadmin(admin.ModelAdmin):
     list_editable=['verified']
-    list_display=['user','verified']
+    list_display=['role','Name','specialty','verified']
 
 class Patientadmin(admin.ModelAdmin):
     list_display=['patientName', 'patientId', 'doctorName', 'appointmentDate',
             'appointmentTime', 'heartRate', 'diastolicBP', 'systolicBP', 'bodyTemp', 'spo2Value']
+    
+# class Doctoradmin(admin.ModelAdmin):
+#     list_display=['role','Name','specialty']
+#     list_editable=['Name','specialty']
 
+
+# class Nurseadmin(admin.ModelAdmin):
+#     list_display=['role','nurseName']
+#     list_editable=['nurseName']
 
 admin.site.register(User, Useradmin)
 admin.site.register(Profile, Profileadmin)
 admin.site.register(Patient, Patientadmin)
+#admin.site.register(Doctor, Doctoradmin)
+# admin.site.register(Nurse, Nurseadmin)
