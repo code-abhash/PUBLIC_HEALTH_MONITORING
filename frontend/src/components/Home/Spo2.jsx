@@ -1,58 +1,3 @@
-
-// import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip,Legend} from 'recharts'
-
-// function Spo2() {
-//   const arrayBp=[
-//     {
-//       "date": "01 Jan",
-//       "spo2": 98
-//     },
-//     {
-//       "date": "02 Jan",
-//       "spo2": 97
-//     },
-//     {
-//       "date": "03 Jan",
-//       "spo2": 96
-//     },
-//     {
-//       "date": "04 Jan",
-//       "spo2": 95
-//     },
-//     {
-//       "date": "05 Jan",
-//       "spo2": 97
-//     },
-//     {
-//       "date": "06 Jan",
-//       "spo2": 98
-//     },
-//     {
-//       "date": "07 Jan",
-//       "spo2": 94
-//     }
-//   ]
-  
-
-//   return (
-//     <>
-//     <ResponsiveContainer width="100%" aspect={2}>
-//       <LineChart data={arrayBp} height={400} width={500}>
-//       <Legend/>
-//         <Tooltip/>
-//         <XAxis dataKey="date"/>
-//         <YAxis />
-//         <Line dataKey="spo2" stroke='blue'/>
-//       </LineChart>
-      
-//     </ResponsiveContainer>
-
-//     </>
-//   )
-// }
-
-// export default Spo2;
-
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
@@ -73,11 +18,11 @@ const SPO2Chart = () => {
   };
 
   const weekData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     datasets: [
       {
         label: 'SPO2 Per Week',
-        data: [96, 97, 95, 98, 96],
+        data: [96, 97, 95, 98, 96, 97, 99],
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1

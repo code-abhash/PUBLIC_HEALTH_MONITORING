@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
-import img4 from "./img/logo.jpg";
+import img4 from "./img/logo.png";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import AuthContext from "../../../Auth_contxt/Authcontext";
@@ -48,10 +48,10 @@ const Login = () => {
         <img
           src={img4}
           alt="logo"
-          className="w-16 h-auto m-4 border-2 rounded border-gray-500"
+          className="w-auto h-10 m-4 border-2 rounded"
         ></img>
       </center>
-      <div className="flex flex-col justify-center items-center bg-gradient-to-b from-blue-400  to-blue-500  backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 rounded-3xl ">
+      <div className="flex flex-col justify-center items-center backdrop-filter backdrop-blur-xl border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2 rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Login</div>
         <form onSubmit={handleLogin}>
         <div className="flex flex-col gap-3 mt-8">
@@ -99,7 +99,7 @@ const Login = () => {
           </button>
           <div className="flex flex-row gap-2 justify-between mb-12">
             <p className="text-stone-950 font-bold">Don't have an account?</p>
-            <Link to="/register" className="text-green-100 font-semibold ">
+            <Link to="/register" className="font-semibold ">
               Register Here!
             </Link>
             <div></div>

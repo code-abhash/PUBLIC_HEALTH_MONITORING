@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import img4 from "./img/logo.jpg";
+import img4 from "./img/logo.png";
 import "./Auth.css";
 import AuthContext from "../../../Auth_contxt/Authcontext";
 
@@ -60,10 +60,10 @@ const Signup = () => {
         <img
           src={img4}
           alt="logo"
-          className="w-16 h-auto m-4 border-2 rounded border-gray-500"
+          className="w-auto h-10 m-4 border-2 rounded"
         ></img>
       </center>
-      <div className="flex flex-col justify-center items-center bg-gradient-to-b from-blue-400  to-blue-500  backdrop-filter backdrop-blur-lg border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2  rounded-3xl ">
+      <div className="flex flex-col justify-center items-center   backdrop-filter backdrop-blur-xl border-opacity-30 shadow-lg m-auto  p-5 w-full sm:w-4/5 md:w-4/6 lg:w-2/5  border-2  rounded-3xl ">
         <div className=" font-mono font-bold text-4xl underline">Sign up</div>
         <div className="flex flex-col gap-3 mt-8">
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 mt-8">
@@ -145,7 +145,7 @@ const Signup = () => {
             <p className="text-stone-950 font-bold ">
               Already have an account?
             </p>
-            <Link to="/login" className="text-green-100 font-semibold mb-5 ">
+            <Link to="/login" className="font-semibold mb-5 ">
               Login!
             </Link>
             <div>

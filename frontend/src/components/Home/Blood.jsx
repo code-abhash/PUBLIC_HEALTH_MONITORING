@@ -1,71 +1,3 @@
-// import React from 'react'
-// import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,Tooltip,Legend} from 'recharts'
-
-// const Blood = () => {
-//     const arrayBp=[
-//         {
-//           "date": "01 Jan",
-//           "systolic": 120,
-//           "diastolic": 80
-//         },
-//         {
-//           "date": "02 Jan",
-//           "systolic": 122,
-//           "diastolic": 78
-//         },
-//         {
-//           "date": "03 Jan",
-//           "systolic": 118,
-//           "diastolic": 82
-//         },
-        
-//           {
-//             "date": "04 Jan",
-//             "systolic": 125,
-//             "diastolic": 79
-//           },
-//           {
-//             "date": "05 Jan",
-//             "systolic": 118,
-//             "diastolic": 81
-//           },
-//           {
-//             "date": "06 Jan",
-//             "systolic": 123,
-//             "diastolic": 77
-//           },
-//           {
-//             "date": "07 Jan",
-//             "systolic": 130,
-//             "diastolic": 84
-//           },
-//           {
-//             "date": "08 Jan",
-//             "systolic": 126,
-//             "diastolic": 80
-//           }
-      
-//     ]
-//   return (
-//     <>
-//     <ResponsiveContainer width="100%" aspect={2}>
-//       <LineChart data={arrayBp} height={400} width={500}>
-//       <Legend/>
-//         <Tooltip/>
-//         <XAxis dataKey="date"/>
-//         <YAxis />
-//         <Line dataKey="systolic" stroke='red'/>
-//         <Line dataKey="diastolic" stroke='green'/>
-//       </LineChart>
-      
-//     </ResponsiveContainer>
-
-//     </>
-//   )
-// }
-
-// export default Blood
-
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
@@ -93,18 +25,18 @@ const BloodPressureChart = () => {
   };
 
   const weekData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     datasets: [
       {
         label: 'Systolic BP Per Week',
-        data: [123, 125, 122, 126, 124],
+        data: [123, 125, 122, 126, 124, 122, 125],
         fill: false,
         borderColor: 'rgb(255, 99, 132)',
         tension: 0.1
       },
       {
         label: 'Diastolic BP Per Week',
-        data: [83, 85, 82, 86, 84],
+        data: [83, 85, 82, 86, 84, 83, 85],
         fill: false,
         borderColor: 'rgb(54, 162, 235)',
         tension: 0.1

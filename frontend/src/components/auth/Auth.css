@@ -5,7 +5,7 @@ option{
     background: rgba(33, 160, 37, 0.3) ;
 }
 .bgimg{
-    background-image: url("./img/BG.jpeg") ;
+    background-image: url("./img/bg.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

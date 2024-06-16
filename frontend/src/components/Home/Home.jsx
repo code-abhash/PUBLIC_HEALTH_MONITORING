@@ -5,6 +5,7 @@ import Realtime from "./Realtime";
 import Panel from "./Panel";
 import Infobutton from "../Infobutton/Infobutton";
 import "./Home.css";
+import Footer from '../Footer'
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
           -Temperature`}/></p>
         <Realtime />
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import img1 from "./img/logo.jpg";
+import img1 from "./img/logo.png";
 import img2 from "./img/img3.jpg";
 import React, { useState, useEffect } from "react";
 import './Home.css';
@@ -41,10 +41,63 @@ const Navbar = () => {
             <img
               src={img1}
               alt="Logo"
-              className="object-cover w-14 h-auto border border-transparent rounded-lg"
+              className="object-cover w-auto h-10 border border-transparent rounded-lg"
             ></img>
           </NavLink>
-          <NavLink
+          <div
+            id="nav-menu"
+            className="hidden lg:flex gap-10 justify-between items-center"
+          >
+            <NavLink
+              to="/home"
+              className="pl-5 pr-5 font-bold hover:underline rounded"
+            >
+              Home
+            </NavLink>
+            <NavLink
+
+              to="/patients"
+              className="pl-5 pr-5 font-bold hover:underline rounded"
+              >
+              Patients
+            </NavLink>
+            <NavLink
+
+              to="/PRecords"
+              className="pl-5 pr-5 font-bold hover:underline rounded"
+            >
+              Patient Records
+            </NavLink>
+            <NavLink
+              to="/nurse"
+             className="pl-5 pr-5 font-bold hover:underline rounded"
+            >
+              Data Entry
+            </NavLink>
+            <NavLink
+              to="/settings"
+              className="pl-5 pr-5 font-bold hover:underline rounded"
+            >
+              Settings
+            </NavLink>
+          </div>
+          <div
+            id="nav-menu"
+            className="hidden lg:flex justify-between items-center "
+          >
+            <NavLink
+              to="/home"
+              className="pl-5 pr-5 font-bold hover:text-gray-900  active:text-gray-950"
+            >
+              <FontAwesomeIcon icon={faBell} />
+            </NavLink>
+            <NavLink
+              to="/home"
+              className="pl-5 pr-5 font-bold hover:text-gray-900  active:text-gray-950"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </NavLink>
+            <NavLink
             to="/"
             id="logo"
             className="hidden lg:flex gap-5 justify-between items-center"
@@ -56,62 +109,9 @@ const Navbar = () => {
             ></img>
             <span className="pl-4 font-medium ">User</span>
           </NavLink>
-          <div
-            id="nav-menu"
-            className="hidden lg:flex gap-10 justify-between items-center"
-          >
-            <NavLink
-              to="/home"
-              className="pl-5 pr-5 font-bold hover:text-gray-400  rounded hover:bg-gray-200 focus:text-slate-600"
-            >
-              Home
-            </NavLink>
-            <NavLink
-
-              to="/patients"
-              className="pl-5 pr-5 font-bold hover:text-gray-400  rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
-            >
-              Patients
-            </NavLink>
-            <NavLink
-
-              to="/PRecords"
-              className="pl-5 pr-5 font-bold hover:text-gray-400  rounded hover:bg-gray-200 active:bg-slate-400 focus:text-slate-600"
-            >
-              Patient Records
-            </NavLink>
-            <NavLink
-              to="/nurse"
-              className="pl-5 pr-5 font-bold hover:text-gray-400  rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
-            >
-              Data Entry
-            </NavLink>
-            <NavLink
-              to="/settings"
-              className="pl-5 pr-5 font-bold hover:text-gray-400  rounded hover:bg-gray-200 active:text-gray-950 focus:text-slate-600"
-            >
-              Settings
-            </NavLink>
-          </div>
-          <div
-            id="nav-menu"
-            className="hidden lg:flex justify-between items-center "
-          >
-            <NavLink
-              to="/"
-              className="pl-5 pr-5 font-bold hover:text-gray-900  active:text-gray-950"
-            >
-              <FontAwesomeIcon icon={faBell} />
-            </NavLink>
-            <NavLink
-              to="/"
-              className="pl-5 pr-5 font-bold hover:text-gray-900  active:text-gray-950"
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-            </NavLink>
             <NavLink
               to="/login"
-              className="pl-5 pr-5 font-bold hover:text-gray-900  rounded hover:bg-gray-200 active:text-gray-950"
+              className="pl-5 pr-5 font-bold hover:underline rounded"
             >
               Logout
             </NavLink>
@@ -121,7 +121,7 @@ const Navbar = () => {
           </button>
           <div
             id="nav-dilogue"
-            className={`fixed bg-gray-100 h-5/6 z-20 inset-0 p-3 ${
+            className={`fixed bg-gray-200 h-5/6 z-20 inset-0 p-3 ${
               isMenuOpen ? "" : "hidden"
             }`}
           >
@@ -129,7 +129,7 @@ const Navbar = () => {
               <img
                 src={img1}
                 alt="Logo"
-                className="object-cover w-12 h-auto border border-transparent rounded-lg"
+                className="object-fill w-auto h-10 border border-transparent rounded-lg"
               ></img>
               <button className="p-2 lg:hidden" onClick={handleMenu}>
                 <FontAwesomeIcon icon={faXmark} className="text-gray-800 h-6" />
