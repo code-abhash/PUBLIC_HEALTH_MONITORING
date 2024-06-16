@@ -18,9 +18,10 @@ input[type='number'] {
 }
 
 `;
-const BodyTemperatureButton = () => {
-  const [bodyTemp, setBodyTemp] = useState(37); // Default to average normal body temperature
-
+const BodyTemperatureButton = (props) => {
+  const [bodyTemp, setBodyTemp] = useState(34);
+   // Default to average normal body temperature
+   props.getbodyTemp(bodyTemp)
   // Function to handle slider change
   const handleSliderChange = (event) => {
     setBodyTemp(event.target.value);

@@ -19,8 +19,9 @@ input[type='number'] {
 
 `;
 
-const HeartRateButton = () => {
-  const [heartRate, setHeartRate] = useState(60); // Default to normal heart rate
+const HeartRateButton = (props) => {
+  const [heartRate, setHeartRate] = useState("40");
+  props.getheartRate(heartRate) // Default to normal heart rate
 
   // Function to handle slider change
   const handleSliderChange = (event) => {

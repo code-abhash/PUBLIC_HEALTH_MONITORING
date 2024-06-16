@@ -20,8 +20,9 @@ input[type='number'] {
 
 `;
 
-const SPO2Slider = () => {
+const SPO2Button = (props) => {
   const [spo2Value, setSpo2Value] = useState(95); // Default to average normal SPO2 value
+  props.getspo2Value(spo2Value)
 
   // Function to handle slider change
   const handleSliderChange = (event) => {
@@ -75,4 +76,4 @@ const SPO2Slider = () => {
   );
 };
 
-export default SPO2Slider;
+export default SPO2Button;

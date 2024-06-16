@@ -20,9 +20,9 @@ input[type='number'] {
 `;
 
 
-const DiastolicBPButton = () => {
-  const [diastolicBP, setDiastolicBP] = useState(80); // Default to average normal diastolic BP
-
+const DiastolicBPButton = (props) => {
+  const [diastolicBP, setDiastolicBP] = useState(60); // Default to average normal diastolic BP
+  props.getdiastolicBP(diastolicBP)
   // Function to handle slider change
   const handleSliderChange = (event) => {
     setDiastolicBP(event.target.value);

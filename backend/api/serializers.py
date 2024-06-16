@@ -1,4 +1,4 @@
-from api.models import User, Profile
+from api.models import User, Profile, Patient
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
@@ -50,3 +50,12 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+    
+class PatientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Patient
+        fields='__all__'
+
+
+    
+    

@@ -18,8 +18,9 @@ input[type='number'] {
 }
 `;
 
-const SystolicBPButton = () => {
+const SystolicBPButton = (props) => {
   const [systolicBP, setSystolicBP] = useState(120); // Default to average normal systolic BP
+  props.getsystolicBP(systolicBP)
 
   // Function to handle slider change
   const handleSliderChange = (event) => {

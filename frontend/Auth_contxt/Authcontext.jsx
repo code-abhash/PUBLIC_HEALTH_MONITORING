@@ -393,6 +393,46 @@ export const AuthProvider = ({ children }) => {
             });
         }
     };
+    // const dataentry = async (patientId, patientName, doctorName,heartRate,diastolicBP,systolicBP,bodyTemp,spo2Value) =>{
+    //     try {
+    //         const response = await fetch("http://127.0.0.1:8000/api/patientslistview/", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify({ patientId, patientName, doctorName,heartRate,diastolicBP,systolicBP,bodyTemp,spo2Value })
+    //         });
+
+    //         if (response.status === 201) {
+    //             navigate("/nurse");
+    //             Swal.fire({
+    //                 title: "Data-Entered Successfully",
+    //                 icon: "success",
+    //                 toast: true,
+    //                 timer: 3000,
+    //                 position: 'top-right',
+    //                 timerProgressBar: true,
+    //                 showConfirmButton: false,
+    //             });
+
+    //         } else {
+    //             throw new Error(`Entry of data failed with status ${response.status}`);
+    //         }
+    //     } catch (error) {
+    //         console.error("Entry error:", error);
+    //         Swal.fire({
+    //             title: "Entry Error",
+    //             text: error.message,
+    //             icon: "error",
+    //             toast: true,
+    //             timer: 3000,
+    //             position: 'top-right',
+    //             timerProgressBar: true,
+    //             showConfirmButton: false,
+    //         });
+    //     }
+
+    // };
 
     const logoutUser = () => {
         setAuthTokens(null);
