@@ -287,9 +287,9 @@ const Records = () => {
                 {row.cells.map(cell => (
                   <td {...cell.getCellProps()} className="p-4">{cell.render("Cell")}</td>
                 ))}
-                <td className="p-4 flex gap-2">
-                  <button onClick={() => handleEditClick(row)} className="border-none p-2 bg-blue-600 text-white rounded-lg mr-5 cursor-pointer">Edit</button>
-                  <button onClick={() => handleDeleteClick(row)} className="border-none p-2 bg-red-600 text-white rounded-lg ml-5 cursor-pointer">Delete</button>
+                <td className="p-4 flex flex-row justify-around gap-2">
+                  <button onClick={() => handleEditClick(row)} className="border-none p-2 bg-blue-600 text-white rounded-lg  cursor-pointer">Edit</button>
+                  <button onClick={() => handleDeleteClick(row)} className="border-none p-2 bg-red-600 text-white rounded-lg  cursor-pointer">Delete</button>
                 </td>
               </tr>
             );
